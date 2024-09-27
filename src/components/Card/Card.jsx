@@ -2,8 +2,9 @@ import './Card.css'
 export default function Card(props) {
   return (
     <div className="card">
-      <h1>{props.nome}</h1>
-      <img src={props.imagem} width="200px" />
+      <h2>{props.item.nome}</h2>
+      {props.item.evoluiPara && <p><b>Evolui Para: </b>{props.item.evoluiPara}</p>}
+      <img src={props.item.imagem} width="200px" />
     </div>
   )
 }
